@@ -26,7 +26,6 @@ function App() {
 
           <Route path="/Product" element={<Search dish={dishes} />}>
             < Route path=":itemId" element={<Item Dishes={dishes} />} />
-
           </Route>
 
           <Route path="*" element={<NoPage />} />

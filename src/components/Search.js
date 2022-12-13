@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Form from 'react-bootstrap/Form';
 import RecipeList from "./RecipeList";
 
+import DisplayNutrition from "./DisplayNutrition";
 
 
 function Search({ dish }) {
@@ -29,6 +30,8 @@ function Search({ dish }) {
             </Form>
 
             <RecipeList dishes={filtered} />
+
+            {/* <DisplayNutrition recipes={searchField} /> */}
 
         </Container>
 

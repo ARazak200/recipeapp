@@ -2,13 +2,24 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 import {
-  styled, Container, Typography, Grid, Paper, Card,
-  CardContent,
+  styled, Container, Typography, Grid, Paper,
+  //  Card,
+  // CardContent,
   // CardMedia,
   // CardActions,
   Button
   // Box
 } from '@mui/material/';
+
+//Recipe rating
+//import RecipeRating from "./RecipeRating";
+
+//nut
+
+import ShowReviews from "./DisplayNutrition";
+
+import { dishes } from "../data/data";
+
 
 
 const Item = ({ Dishes }) => {
@@ -24,11 +35,11 @@ const Item = ({ Dishes }) => {
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
     padding: theme.spacing(0),
-    textAlign: 'center',
+    // textAlign: 'center',
     color: theme.palette.text.primary,
   }));
   //console.log(itemId);
-  const { name, description, category, methodList, ingredientList } = currentItem[0];
+  const { name, description, category, method, ingredient, allergy } = currentItem[0];
   //allergy, ingredient,
   return (
     <>
@@ -43,47 +54,95 @@ const Item = ({ Dishes }) => {
               <Typography variant="h3" component="h2" textAlign="center" >
                 {name}
               </Typography>
-              <Typography variant="h5" component="div" textAlign="center">
+              <Typography variant="h5" component="span" textAlign="center">
                 {description}
               </Typography>
 
             </MUIItem>
           </Grid>
 
-          <Grid item xs={5} >
-            <MUIItem sx={{ maxWidth: 450 }}>
-              <Typography variant="h4" component="div">
-                {category}
-              </Typography>
-              img
-            </MUIItem>
-          </Grid>
-          <Grid item xs={5} >
-            <MUIItem sx={{ maxWidth: 450 }}>
+
+          <Grid item xs={5} textAlign="center">
+
+
+            <MUIItem sx={{ maxWidth: 450 }} >
               {/* bullet list */}
-              <Typography variant="body4" component="div">
-                {ingredientList}
+
+              <Typography variant="h4" component="span">
+                Dietary Allowance
               </Typography>
+
+              <Typography variant="body2" component="span">
+                {allergy.map((allergies) => (
+                  <span key={allergies.name}>
+                    <li>{allergies.name}</li>
+                  </span>
+                ))}
+
+
+              </Typography>
+            </MUIItem>
+
+            <Typography variant="h4" component="span">
+              ingredient
+            </Typography>
+
+            <Typography variant="body2" component="span">
+
+              {ingredient.map((ingredients) => (
+                <span key={ingredients.name}>
+                  <li>{ingredients.amount} {ingredients.name}</li>
+                </span>
+              ))}
+            </Typography>
+
+
+          </Grid>
+          <Grid item xs={2} textAlign="center">
+            <Button>Add To shopping list</Button>
+            <Button>Add Favorites</Button>
+          </Grid>
+
+          <Grid item xs={5} textAlign="center" sx={{ maxWidth: 450 }} >
+
+            <Typography variant="h4" component="span">
+              {category}
+            </Typography>
+            img
+
+          </Grid>
+
+          <Grid item xs={20} >
+            <MUIItem sx={{ maxWidth: 2000 }}>
+              {method.map((methods) => (
+                <ul key={methods.step}>
+                  <Typography variant="h4" component="span">
+                    Step {methods.step}
+                  </Typography>
+                  <Typography variant="body2" component="span">
+                    {methods.instruction}
+                  </Typography>
+
+                </ul>
+              ))}
 
             </MUIItem>
           </Grid>
-          <Grid item xs={2}>
-            <MUIItem>
-              <Typography variant="body4" component="div">
-                rating
-              </Typography>
-              <Button>Add To shopping list</Button>
-              <Button>Add Favorites</Button>
+
+          <Grid item xs={10} >
+            <MUIItem sx={{ maxWidth: 450 }}>
+              rating
+
+              {/* <RecipeRating dishes={(dish)} /> */}
+
+
+
+
+
             </MUIItem>
           </Grid>
+
         </Grid>
-
-        <Card>
-          <CardContent>
-
-            {methodList}
-          </CardContent>
-        </Card>
 
       </Container>
 

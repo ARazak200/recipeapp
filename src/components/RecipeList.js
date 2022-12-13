@@ -1,44 +1,36 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
-import Button from 'react-bootstrap/Button';
+//import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
 
-import Accordion from "react-bootstrap/Accordion";
+//import Accordion from "react-bootstrap/Accordion";
 
 import MUIAccordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import muiBtn from '@mui/material/Button';
-import FoodDish from "./FoodDish";
-import Item from "./Item";
-
+import Btn from '@mui/material/Button';
+//import FoodDish from "./FoodDish";
+//import Item from "./Item";
+//import { useParams } from "react-router-dom";
 
 const RecipeList = ({ dishes }) => {
 
-    // const availableList = dishList.filter((entry) => {
-    //     return entry.available === "yes";
-    // })
+    // const { itemId } = useParams();
+    // const currentItem = dishes.filter((entry) => {
+    //     //console.log(entry);
+    //     return entry.id === itemId;
+    // });
 
-
+    //const { name, description } = currentItem[0];
     return (
         <>
             {/* TODO Style sub menu   */}
 
             <Container>
 
-
-                {/* <Accordion >
-                    {availableList.map((dish, index) => {
-                        return (
-                            <Accordion.Item eventKey={index} key={index}>
-                                <Item dish={dishes} />
-                            </Accordion.Item>
-                        );
-                    })}
-                </Accordion> */}
                 <MUIAccordion sx={{ maxWidth: 500 }}>
 
                     <AccordionSummary
@@ -53,14 +45,28 @@ const RecipeList = ({ dishes }) => {
 
                 <ul>
                     {dishes.map((dish) => (
-                        <li key={dish.id}>
-                            {/* <a href='Recipe/:itemId'>{dish.name}</a> */}
-                            <Link to={dish.id}>{dish.name} </Link>
-                        </li>
+                        <span key={dish.id}>
+                            <Btn>
+                                <Link to={dish.id}>{dish.name} </Link>
+                            </Btn>
 
+                        </span>
                     ))}
                 </ul>
+                <br></br>
 
+                {/* <Accordion >
+
+                    {dishes.map((dish) => (
+                        <AccordionSummary key={dish.id}>
+                            <Link to={dish.id}>{dish.name} </Link>
+                        </AccordionSummary>
+
+                    ))}
+                    <AccordionDetails>
+                        {description}
+                    </AccordionDetails>
+                </Accordion> */}
 
             </Container>
 
@@ -69,4 +75,3 @@ const RecipeList = ({ dishes }) => {
     );
 };
 export default RecipeList;
-
