@@ -7,7 +7,7 @@ import {
     Link
 } from '@mui/material/';
 
-
+import img from '../assets/fork_w.png'
 function Copyright() {
     return (
         <Typography variant="body2" color="text.secondary">
@@ -38,9 +38,10 @@ export default function StickyFooter() {
         >
             <Container maxWidth="sm">
                 <Typography variant="h5">
-                    where all the magic recipes are placed
+                    Where the Magic Recipes are Placed
                 </Typography>
                 <Copyright />
+                <img src={img} height="150" width="150" alt='logo' />
             </Container>
 
         </Box >

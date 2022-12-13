@@ -7,66 +7,85 @@ import Container from 'react-bootstrap/Container';
 
 //import Accordion from "react-bootstrap/Accordion";
 
-import MUIAccordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
+import {
+    Accordion,
+    AccordionSummary,
+    AccordionDetails,
+    Button,
+    Radio,
+    RadioGroup,
+    FormControlLabel,
+    FormControl,
+    FormLabel,
+    Typography
+} from '@mui/material';
+
+
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Btn from '@mui/material/Button';
+
+//import MUIAccordion from '@mui/material/Accordion';
+//import AccordionSummary from '@mui/material/AccordionSummary';
+//import AccordionDetails from '@mui/material/AccordionDetails';
+
+// import Btn from '@mui/material/Button';
 //import FoodDish from "./FoodDish";
 //import Item from "./Item";
 //import { useParams } from "react-router-dom";
 
 const RecipeList = ({ dishes }) => {
-
     // const { itemId } = useParams();
     // const currentItem = dishes.filter((entry) => {
     //     //console.log(entry);
     //     return entry.id === itemId;
     // });
 
-    //const { name, description } = currentItem[0];
+    // const { name, description, method, ingredient, allergy } = currentItem[0];
+
     return (
         <>
             {/* TODO Style sub menu   */}
 
             <Container>
 
-                <MUIAccordion sx={{ maxWidth: 500 }}>
+                <Accordion sx={{ maxWidth: 700 }}>
 
-                    <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}>
-
-                        Filter Search
+                    <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                        <Typography variant="h5" component="p">
+                            Filtered Search
+                        </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        Checkbox of allergy
-                    </AccordionDetails>
-                </MUIAccordion>
+                        {/* Checkbox of allergy */}
 
-                <ul>
+                        <FormControl>
+                            <FormLabel id="demo-row-radio-buttons-group-label">Dietary requirements</FormLabel>
+                            <RadioGroup
+                                row
+                                aria-labelledby="demo-row-radio-buttons-group-label"
+                                name="row-radio-buttons-group"
+                            >
+                                <FormControlLabel value="GlutenFree" control={<Radio />} label="Gluten Free" />
+                                <FormControlLabel value="vegetarian" control={<Radio />} label="Vegetarian" />
+                                <FormControlLabel value="vegan" control={<Radio />} label="Vegan" />
+                                <FormControlLabel value="DairyFree" control={<Radio />} label="Dairy Free" />
+                                <FormControlLabel value="NutFree" control={<Radio />} label="Nut Free" />
+                            </RadioGroup>
+                        </FormControl>
+
+
+                    </AccordionDetails>
+                </Accordion>
+
+                <div >
                     {dishes.map((dish) => (
-                        <span key={dish.id}>
-                            <Btn>
+                        <p key={dish.id}>
+                            <Button variant="outlined">
                                 <Link to={dish.id}>{dish.name} </Link>
-                            </Btn>
-
-                        </span>
+                            </Button>
+                            <br></br>
+                        </p>
                     ))}
-                </ul>
-                <br></br>
-
-                {/* <Accordion >
-
-                    {dishes.map((dish) => (
-                        <AccordionSummary key={dish.id}>
-                            <Link to={dish.id}>{dish.name} </Link>
-                        </AccordionSummary>
-
-                    ))}
-                    <AccordionDetails>
-                        {description}
-                    </AccordionDetails>
-                </Accordion> */}
+                </div>
 
             </Container>
 

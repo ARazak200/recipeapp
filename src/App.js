@@ -9,11 +9,9 @@ import StyledLayout from "./components/StyledLayout";
 import Search from "./components/Search";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import RecipeList from './components/RecipeList';
+//import RecipeList from './components/RecipeList';
 import Item from './components/Item';
 import { dishes } from './data/data';
-
-
 
 function App() {
   return (

@@ -6,7 +6,7 @@ export const dishes = [
         category: "Starter",
         rating: ["4", "2", "3", "5"],
         available: "yes",
-        img: "images/logo512.png",
+        img: "../images/aloo-tiki.png",
         ingredient: [
             { name: "Potatoes", amount: "500g" },
             { name: "Breadcrumbs", amount: "3 tbsp" },
@@ -42,6 +42,7 @@ export const dishes = [
         category: "Starter",
         rating: ["4", "2", "1", "5"],
         available: "yes",
+        img: "../images/pakora.png",
         ingredient: [
             { name: "Green chilli", amount: "1" },
             { name: "Ginger", amount: "thumb-sized piece" },
@@ -78,6 +79,7 @@ export const dishes = [
         category: "Main",
         rating: ["4", "2", "4", "5"],
         available: "yes",
+        img: "../images/Chicken-biryani-pilau.png",
         ingredient: [
             { name: "Vegetable oil", amount: "2 tbsp" },
             { name: "Chicken thighs", amount: "6 large" },
@@ -106,6 +108,7 @@ export const dishes = [
         category: "Main",
         rating: ["1", "5", "3", "5"],
         available: "yes",
+        img: "../images/kebab.png",
         ingredient: [
             { name: "Chicken breasts", amount: "6" },
             { name: "Red, orange and green peppers", amount: "2" },
@@ -135,6 +138,7 @@ export const dishes = [
         category: "Desert",
         rating: ["3", "2", "5", "2"],
         available: "yes",
+        img: "../images/kheer.png",
         ingredient: [
             { name: "Saffron strands", amount: "½ tsp " },
             { name: "Whole milk", amount: "2 litres" },
@@ -164,9 +168,9 @@ export const dishes = [
         name: "Sweet Rice",
         description: "This is delicious – vibrant with spices, with a sweet note from the sugar and raisins.",
         category: "Desert",
-
         rating: ["2", "2", "2", "4"],
         available: "yes",
+        img: "../images/sweet-rice.png",
         ingredient: [
             { name: "basmati rice", amount: "350g " },
             { name: "butter", amount: " 50g " },

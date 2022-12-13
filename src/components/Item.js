@@ -3,22 +3,19 @@ import { useParams } from "react-router-dom";
 
 import {
   styled, Container, Typography, Grid, Paper,
-  //  Card,
-  // CardContent,
-  // CardMedia,
-  // CardActions,
-  Button
+  Card,
+  CardContent,
+  CardMedia,
+  CardActions,
+  Button,
+  CardActionArea
   // Box
 } from '@mui/material/';
 
 //Recipe rating
 //import RecipeRating from "./RecipeRating";
 
-//nut
-
-import ShowReviews from "./DisplayNutrition";
-
-import { dishes } from "../data/data";
+//import DisplayNutrition from "./DisplayNutrition";
 
 
 
@@ -39,7 +36,7 @@ const Item = ({ Dishes }) => {
     color: theme.palette.text.primary,
   }));
   //console.log(itemId);
-  const { name, description, category, method, ingredient, allergy } = currentItem[0];
+  const { name, description, category, method, ingredient, allergy, img } = currentItem[0];
   //allergy, ingredient,
   return (
     <>
@@ -47,70 +44,94 @@ const Item = ({ Dishes }) => {
 
       <Container>
 
-        <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid>
+        <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 2 }}>
+          <Grid textAlign="center">
 
-            <MUIItem>
-              <Typography variant="h3" component="h2" textAlign="center" >
-                {name}
-              </Typography>
-              <Typography variant="h5" component="span" textAlign="center">
-                {description}
-              </Typography>
 
-            </MUIItem>
+            <Typography variant="h3" component="h2"  >
+              {name}
+            </Typography>
+            <Typography variant="h5" component="p" >
+              {description}
+            </Typography>
+          </Grid>
+
+          <Grid item xs={5} textAlign="center" sx={{ maxWidth: 450 }} >
+
+
+            <Card sx={{ maxWidth: 500 }}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="250"
+                  image={img}
+                  alt={name}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {category}
+                  </Typography>
+
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary">Add To shopping list</Button>
+                <Button size="small" color="primary">Add Favorites</Button>
+              </CardActions>
+            </Card>
+
+
+
+
+
           </Grid>
 
 
-          <Grid item xs={5} textAlign="center">
 
-
-            <MUIItem sx={{ maxWidth: 450 }} >
-              {/* bullet list */}
-
-              <Typography variant="h4" component="span">
-                Dietary Allowance
+          <Grid item xs={5} >
+            <MUIItem sx={{ maxWidth: 400 }} >
+              <Typography variant="h4" component="h2" textAlign="center">
+                Ingredient
               </Typography>
 
-              <Typography variant="body2" component="span">
-                {allergy.map((allergies) => (
-                  <span key={allergies.name}>
-                    <li>{allergies.name}</li>
+
+              <Typography variant="body1" component="span">
+
+                {ingredient.map((ingredients) => (
+                  <span key={ingredients.name}>
+                    <li>{ingredients.amount} {ingredients.name}</li>
                   </span>
                 ))}
-
-
               </Typography>
             </MUIItem>
 
-            <Typography variant="h4" component="span">
-              ingredient
+
+          </Grid>
+          <Grid item xs={2} sx={{ maxWidth: 40 }}>
+
+            <Typography variant="h4" component="h2">
+              Dietary Allowance
             </Typography>
 
-            <Typography variant="body2" component="span">
+            <Typography variant="body2" component="div" textAlign="center">
+              {allergy.map((allergies) => (
+                <span key={allergies.name}>
 
-              {ingredient.map((ingredients) => (
-                <span key={ingredients.name}>
-                  <li>{ingredients.amount} {ingredients.name}</li>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {allergies.name}
+                  </Typography>
+
                 </span>
               ))}
             </Typography>
 
 
-          </Grid>
-          <Grid item xs={2} textAlign="center">
-            <Button>Add To shopping list</Button>
-            <Button>Add Favorites</Button>
-          </Grid>
 
-          <Grid item xs={5} textAlign="center" sx={{ maxWidth: 450 }} >
 
-            <Typography variant="h4" component="span">
-              {category}
-            </Typography>
-            img
 
           </Grid>
+
+
 
           <Grid item xs={20} >
             <MUIItem sx={{ maxWidth: 2000 }}>
@@ -119,7 +140,7 @@ const Item = ({ Dishes }) => {
                   <Typography variant="h4" component="span">
                     Step {methods.step}
                   </Typography>
-                  <Typography variant="body2" component="span">
+                  <Typography variant="body1" component="div" textAlign="justify">
                     {methods.instruction}
                   </Typography>
 
