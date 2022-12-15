@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 
 //import Button from 'react-bootstrap/Button';
@@ -33,13 +33,12 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 //import { useParams } from "react-router-dom";
 
 const RecipeList = ({ dishes }) => {
-    // const { itemId } = useParams();
-    // const currentItem = dishes.filter((entry) => {
-    //     //console.log(entry);
-    //     return entry.id === itemId;
-    // });
+    const [searchField, setSearchField] = useState("");
 
-    // const { name, description, method, ingredient, allergy } = currentItem[0];
+    const handleClick = (e) => {
+        setSearchField(e.target.innerHTML);
+        console.log(searchField);
+    };
 
     return (
         <>
@@ -68,7 +67,6 @@ const RecipeList = ({ dishes }) => {
                                 <FormControlLabel value="vegetarian" control={<Radio />} label="Vegetarian" />
                                 <FormControlLabel value="vegan" control={<Radio />} label="Vegan" />
                                 <FormControlLabel value="DairyFree" control={<Radio />} label="Dairy Free" />
-                                <FormControlLabel value="NutFree" control={<Radio />} label="Nut Free" />
                             </RadioGroup>
                         </FormControl>
 
@@ -80,7 +78,7 @@ const RecipeList = ({ dishes }) => {
                     {dishes.map((dish) => (
                         <p key={dish.id}>
                             <Button variant="outlined">
-                                <Link to={dish.id}>{dish.name} </Link>
+                                <Link to={dish.id} onClick="window.location.reload();">{dish.name} </Link>
                             </Button>
                             <br></br>
                         </p>

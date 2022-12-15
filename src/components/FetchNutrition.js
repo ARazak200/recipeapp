@@ -24,7 +24,8 @@ const FetchData = ({ query }) => {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "59a1ed6959mshd3995aae4929d99p14e246jsnd8b7b3daa451",
+        // Aadam's API key
+        "X-RapidAPI-Key": "1c55f588cdmshf4ef06833d5d155p1e627ajsn5e2d03b4f1eb",
         "X-RapidAPI-Host": "calorieninjas.p.rapidapi.com",
       },
     };

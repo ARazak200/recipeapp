@@ -2,6 +2,7 @@ export const dishes = [
     {
         id: "1",
         name: "Aloo Tiki",
+        apiName: "potato cake",
         description: "Enjoy these Indian potato patties, filled with peas spiced with fruity mango powder, with tamarind sauce and fresh coriander relish",
         category: "Starter",
         rating: ["4", "2", "3", "5"],
@@ -39,6 +40,7 @@ export const dishes = [
     {
         id: "2",
         name: "Pakora",
+        apiName: "pakora",
         description: "This pakora recipe from Jaswinder Gill produces perfectly spiced and crispy Indian snacks. Ideal for a family feast, serve with your favourite chutney",
         category: "Starter",
         rating: ["4", "2", "1", "5"],
@@ -76,6 +78,7 @@ export const dishes = [
     {
         id: "3",
         name: "Chicken Biryani Pilau",
+        apiName: "Chicken Biryani",
         description: "Easy and cheap to recreate at home, students won't need to order takeaways ever again!",
         category: "Main",
         rating: ["4", "2", "4", "5"],
@@ -105,6 +108,7 @@ export const dishes = [
     {
         "id": "4",
         name: "Chicken Shish Kebabs",
+        apiName: "kebab",
         description: "These barbecued kebabs are big on flavour, but the spice is toned down, so they're great for kids. Offer some chilli sauce on the side for those who like heat, and serve with flatbread",
         category: "Main",
         rating: ["1", "5", "3", "5"],
@@ -135,6 +139,7 @@ export const dishes = [
     {
         id: "5",
         name: "Kheer",
+        apiName: "rice pudding",
         description: "Make this indulgent slow-cooked Pakistani rice pudding with our easy kheer recipe. Studded with dried fruit, it has a sweetly spiced floral flavour and a lovely creaminess",
         category: "Desert",
         rating: ["3", "2", "5", "2"],
@@ -167,6 +172,7 @@ export const dishes = [
     {
         id: "6",
         name: "Sweet Rice",
+        apiName: "yellow rice",
         description: "This is delicious – vibrant with spices, with a sweet note from the sugar and raisins.",
         category: "Desert",
         rating: ["2", "2", "2", "4"],
@@ -189,7 +195,7 @@ export const dishes = [
         ],
         allergy: [
             { name: "Vegetarian" },
-            { name: "Gluten Free" }, { name: "Nut Free" }
+            { name: "Gluten Free" }
         ],
     }
 ];

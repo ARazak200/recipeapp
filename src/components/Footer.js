@@ -41,7 +41,11 @@ export default function StickyFooter() {
                     Where the Magic Recipes are Placed
                 </Typography>
                 <Copyright />
-                <img src={img} height="150" width="150" alt='logo' />
+                <img
+                    src={img}
+                    height="100"
+                    width="100"
+                    alt='logo' />
             </Container>
 
         </Box >
