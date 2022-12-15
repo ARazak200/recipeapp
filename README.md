@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Front-End Web Development Coursework 
+# Author [@ARazak200](https://github.com/ARazak200) 
+Created using   
+<a href="https://reactjs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" width="40" height="40"></a> 
+<a href="https://www.javascript.com" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"></a> 
+<a href="https://mui.com/" target="_blank"><img src="https://mui.com/static/logo.png" alt="MUI" width="40" height="40"></a> 
+<a href="https://getbootstrap.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="Bootstrap" width="40" height="40"></a> 
+<a href="https://www.w3schools.com/html/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain-wordmark.svg" alt="HTML" width="40" height="40"></a> 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Included in repo
+- Video Demo
+- Aadam's CookPages Web Application
 
-## Available Scripts
+## Frameworks used
+- React - Javascript Framework
+- MUI material - External CSS 
+- MUI material Icons
+- React-bootstrap - External CSS 
+- React-Icons
 
-In the project directory, you can run:
+## How to run the site
 
-### `npm start`
+1. Clone this Repo
+```bash
+git clone https://github.com/ARazak200/recipeapp.git
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Go into the root directory of the project 
+```bash
+cd recipeapp 
+```  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. run the site
+```bash
+npm start
+```
 
-### `npm test`
+## A live link to the web application
+ ```
+ vercel
+  ```
+## A link to an local version of the site
+ ```
+ http://localhost:3000
+  ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features that have been Implemented
+- Home Page
+- About Page
+- No Page
+- View Recipes
+- Search recipes
+- Filter recipes by diet requirement
+- Rate recipes
+- View Nutritional information
 
-### `npm run build`
+## Sources 
+### Listed below are the open-sources elements used for the web application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Image Directory  
+Used for the recipes
+```bash
+ cd recipeapp\public\images
+```
+Used for miscellaneous images
+```bash
+ cd recipeapp\src\assets
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Home
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Fork Icon [Click Here](src/assets/fork.png)
+- Chef Gif [Click Here](https://cdn.dribbble.com/users/2556713/screenshots/7569532/media/266e0452b1ce6ebebee6d3d8871d6ddd.gif)
+- Star Rating Gif [Click Here](https://media3.giphy.com/media/EJTlvBBMluIZ2hVvYm/giphy.gif?cid=6c09b952f6b20d6a1bde4e391d875cd6a574cd7562769881&rid=giphy.gif&ct=s)
 
-### `npm run eject`
+### About 
+#### Row 1
+- Chef Kiss Gif [Click Here](https://media.tenor.com/LLLJYVQJNVAAAAAM/chefs-kiss-french-chef.gif)
+- Glasgow Skyline [Click Here](src/assets/Glasgow_Skyline.png)
+- Jalebi gif [Click Here](https://64.media.tumblr.com/97941011293d61fc26c916162532c8f5/tumblr_nyc5fv81eo1sb2waoo4_400.gif)
+#### Row 2
+- [GCU Gif](https://media0.giphy.com/media/JqzjBH56fEhC8sqSwK/200w.gif?cid=6c09b952h1whbp8ohq6dteq8ly4ivm841isp4nnfi2wzslbv&rid=200w.gif&ct=g)
+- [Computing Gif](https://cdn.dribbble.com/users/1912990/screenshots/6129020/cloud_computing.gif) 
+- [Kebab Gif](https://thumbs.gfycat.com/GrouchyFrankLeveret-max-1mb.gif)
+### No Page 
+- [No Page Icon](src/assets/NOPage.png)
+### Recipe Item Images
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+All the recipes are sourced from [BBC Foods](https://www.bbcgoodfood.com/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. [Aloo Tiki](https://www.bbcgoodfood.com/recipes/aloo-tikki)
+2. [Pakpra](https://www.bbcgoodfood.com/recipes/pakora)
+3. [Chicken biryani pilau](https://www.bbcgoodfood.com/recipes/chicken-biryani-pilau)
+4. [Chicken shish kebabs](https://www.bbcgoodfood.com/recipes/traffic-light-chicken-shish-kebabs)
+5. [Kheer](https://www.bbcgoodfood.com/recipes/indian-rice-pudding-kheer)
+6. [Sweet Rice](https://www.bbcgoodfood.com/recipes/yellow-rice)

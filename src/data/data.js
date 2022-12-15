@@ -29,11 +29,12 @@ export const dishes = [
             { step: "4", instruction: "Divide the potato mixture into nine portions with wet hands. Flatten a portion into a 5cm diameter disc with a thickness of 1cm in your palm. Put a teaspoon of the spiced pea filling in the centre of the disc, then gently bring the mashed potato around the filling so it's completely encased. Flatten the ‘tikki’ so that it resembles a patty. Repeat with the remaining potato and filling, then arrange on a baking tray and chill for 20-30 mins to firm up." },
         ],
         allergy: [
-            { name: "vegan" },
-            { name: "vegetarian" },
+            { name: "Vegan" },
+            { name: "Vegetarian" },
             { name: "Nut Free" },
             { name: "Dairy Free" },
         ],
+
     },
     {
         id: "2",
@@ -66,8 +67,8 @@ export const dishes = [
             { step: "6", instruction: "Drain on kitchen paper and keep warm in the oven as you go. Serve immediately with chutney." },
         ],
         allergy: [
-            { name: "vegan" },
-            { name: "vegetarian" },
+            { name: "Vegan" },
+            { name: "Vegetarian" },
             { name: "Nut Free" },
             { name: "Dairy Free" },
         ],
@@ -159,7 +160,7 @@ export const dishes = [
             { step: "4", instruction: "Stir in the cream, then slowly add the rosewater and enough of the saffron and its soaking liquid to just lightly flavour the kheer. Stir in the almonds. Drain the raisins and stir these in, then serve hot or leave to cool completely and chill first." },
         ],
         allergy: [
-            { name: "Gluten Free" }, { name: "vegetarian" },
+            { name: "Gluten Free" }, { name: "Vegetarian" },
         ]
 
     },
@@ -192,3 +193,5 @@ export const dishes = [
         ],
     }
 ];
+
+export const createArray = length => [...Array(length)];

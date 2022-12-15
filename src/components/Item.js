@@ -3,20 +3,16 @@ import { useParams } from "react-router-dom";
 
 import {
   styled, Container, Typography, Grid, Paper,
-  Card,
-  CardContent,
-  CardMedia,
-  CardActions,
+  Card, CardContent, CardMedia, CardActions,
   Button,
-  CardActionArea
-  // Box
+  CardActionArea,
+  Box
 } from '@mui/material/';
 
-//Recipe rating
-//import RecipeRating from "./RecipeRating";
+import StarRating from "./starRating";
 
-//import DisplayNutrition from "./DisplayNutrition";
-
+import DisplayNutrition from "./DisplayNutrition";
+import FetchData from "./FetchNutrition";
 
 
 const Item = ({ Dishes }) => {
@@ -71,7 +67,7 @@ const Item = ({ Dishes }) => {
                   <Typography gutterBottom variant="h5" component="div">
                     {category}
                   </Typography>
-
+                  <StarRating />
                 </CardContent>
               </CardActionArea>
               <CardActions>
@@ -80,17 +76,13 @@ const Item = ({ Dishes }) => {
               </CardActions>
             </Card>
 
-
-
-
-
           </Grid>
 
 
 
           <Grid item xs={5} >
-            <MUIItem sx={{ maxWidth: 400 }} >
-              <Typography variant="h4" component="h2" textAlign="center">
+            <MUIItem sx={{ maxWidth: 350 }} >
+              <Typography gutterBottom variant="h5" component="div" textAlign="center">
                 Ingredient
               </Typography>
 
@@ -107,17 +99,13 @@ const Item = ({ Dishes }) => {
 
 
           </Grid>
-          <Grid item xs={2} sx={{ maxWidth: 40 }}>
-
-            <Typography variant="h4" component="h2">
-              Dietary Allowance
-            </Typography>
+          <Grid item xs={2} sx={{ maxWidth: 100 }}>
 
             <Typography variant="body2" component="div" textAlign="center">
               {allergy.map((allergies) => (
                 <span key={allergies.name}>
 
-                  <Typography gutterBottom variant="h5" component="div">
+                  <Typography variant="h6" component="div">
                     {allergies.name}
                   </Typography>
 
@@ -126,12 +114,17 @@ const Item = ({ Dishes }) => {
             </Typography>
 
 
+            <Box>
+              <Typography variant="h6" component="div" textAlign="center">
+                Nutritional info here
+              </Typography>
 
 
+
+            </Box>
+            <FetchData query={ingredient.name} />
 
           </Grid>
-
-
 
           <Grid item xs={20} >
             <MUIItem sx={{ maxWidth: 2000 }}>
@@ -152,14 +145,7 @@ const Item = ({ Dishes }) => {
 
           <Grid item xs={10} >
             <MUIItem sx={{ maxWidth: 450 }}>
-              rating
-
-              {/* <RecipeRating dishes={(dish)} /> */}
-
-
-
-
-
+              something
             </MUIItem>
           </Grid>
 
