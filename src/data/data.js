@@ -48,12 +48,12 @@ export const dishes = [
         img: "../images/pakora.png",
         ingredient: [
             { name: "Green chilli", amount: "1" },
-            { name: "Ginger", amount: "thumb-sized piece" },
-            { name: "tomato", amount: "1" },
+            { name: "Ginger", amount: "Thumb-sized piece" },
+            { name: "Tomato", amount: "1" },
             { name: "Gram flour", amount: "200g" },
-            { name: "Chilli powder", amount: "1 ½ tsp" },
-            { name: "Garam masala", amount: "1 ½ tsp" },
-            { name: "Ground coriander", amount: "1 ½ tsp" },
+            { name: "Chilli powder", amount: "1½ tsp" },
+            { name: "Garam masala", amount: "1½ tsp" },
+            { name: "Ground coriander", amount: "1½ tsp" },
             { name: "Potatoes", amount: "2 medium" },
             { name: "Aubergine", amount: "½" },
             { name: "Cauliflower", amount: "½" },
@@ -69,10 +69,7 @@ export const dishes = [
             { step: "6", instruction: "Drain on kitchen paper and keep warm in the oven as you go. Serve immediately with chutney." },
         ],
         allergy: [
-            { name: "Vegan" },
-            { name: "Vegetarian" },
-            { name: "Nut Free" },
-            { name: "Dairy Free" },
+            { name: "Vegan" }, { name: "Vegetarian" }, { name: "Dairy Free" },
         ],
     },
     {
@@ -101,8 +98,7 @@ export const dishes = [
             { step: "2", instruction: "Cover the pan and bake for 30 mins until all the liquid has been absorbed and the rice is cooked. Stir in the peas and leave the rice to stand for a few moments before serving." },
         ],
         allergy: [
-            { name: "Gluten Free" }, { name: "Nut Free" },
-            { name: "Dairy Free" },
+            { name: "Gluten Free" }, { name: "Dairy Free" },
         ],
     },
     {
@@ -131,8 +127,7 @@ export const dishes = [
             { step: "3", instruction: "Heat a barbecue to medium, or until a thin layer of coals has turned grey. Cook the kebabs for 10 mins, turning occasionally, until the chicken is charred and cooked through. Serve the kebabs with the reserved yogurt sauce, warmed flatbreads, chopped tomatoes and lemon wedges on the side." },
         ],
         allergy: [
-            { name: "Gluten Free" }, { name: "Nut Free" },
-            { name: "Dairy Free" },
+            { name: "Gluten Free" }, { name: "Dairy Free" },
         ],
 
     },

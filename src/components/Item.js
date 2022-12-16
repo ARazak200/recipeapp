@@ -10,7 +10,7 @@ import {
 
 import StarRating from "./starRating";
 
-import DisplayNutrition from "./DisplayNutrition";
+//import DisplayNutrition from "../../../temp/DisplayNutrition";
 import FetchData from "./FetchNutrition";
 
 const Item = ({ Dishes }) => {
@@ -39,7 +39,7 @@ const Item = ({ Dishes }) => {
           <Grid textAlign="center">
 
 
-            <Typography variant="h3" component="h2"  >
+            <Typography variant="h3" component="h2" sx={{ textDecoration: 'underline' }} >
               {name}
             </Typography>
             <Typography variant="h5" component="p" >
@@ -76,14 +76,26 @@ const Item = ({ Dishes }) => {
 
 
           <Grid item xs={5} >
-            <Card sx={{ maxWidth: 1000 }} >
+
+            <Card>
+              {allergy.map((allergies) => (
+                <span key={allergies.name}>
+                  <Typography variant="h5" component="div" textAlign="center">
+                    {allergies.name}
+                  </Typography>
+                </span>
+              ))}
+
+            </Card>
+
+            <Card sx={{ maxWidth: 700 }} >
               <CardContent>
 
-                <Typography gutterBottom variant="h5" component="div" textAlign="center">
-                  Ingredient
+                <Typography variant="h5" component="div" textAlign="center" sx={{ textDecoration: 'underline' }}>
+                  Ingredients
                 </Typography>
 
-                <Typography variant="body1" component="span">
+                <Typography variant="body1" component="div">
                   <ol>
                     {ingredient.map((ingredients) => (
                       <span key={ingredients.name}>
@@ -93,39 +105,14 @@ const Item = ({ Dishes }) => {
                   </ol>
                 </Typography>
               </CardContent>
-
-
             </Card>
-
-
-          </Grid>
-          <Grid item xs={2} >
-
-            <Typography variant="body2" component="div" textAlign="center">
-              {allergy.map((allergies) => (
-                <span key={allergies.name}>
-
-                  <Typography variant="h6" component="div">
-                    {allergies.name}
-                  </Typography>
-
-                </span>
-              ))}
-            </Typography>
-
-
-
-            <Typography variant="body2" component="div" textAlign="center">
-              <h3>Recipe : {name}</h3>
-
-              <FetchData query={searchField} />
-              {/* <DisplayNutrition dishes={name} /> */}
-            </Typography>
-
-
           </Grid>
 
-          <Grid item xs={20} >
+          {/* <Grid item xs={2} >
+            {/* something
+        </Grid> */}
+
+          <Grid item xs={9} >
             <Card sx={{ maxWidth: 1000 }}>
               {method.map((methods) => (
                 <ul key={methods.step}>
@@ -135,14 +122,21 @@ const Item = ({ Dishes }) => {
                   <Typography variant="body1" component="div" textAlign="center">
                     {methods.instruction}
                   </Typography>
-
                 </ul>
               ))}
 
             </Card>
           </Grid>
 
-          <Grid item xs={10} >
+          <Grid item xs={3} >
+
+            <Typography variant="body2" component="div" textAlign="center" >
+
+              <FetchData query={searchField} />
+              {/* <DisplayNutrition dishes={name} /> */}
+            </Typography>
+
+
 
 
           </Grid>

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Form from 'react-bootstrap/Form';
 import RecipeList from "./RecipeList";
 
-import DisplayNutrition from "./DisplayNutrition";
+//import DisplayNutrition from "./DisplayNutrition";
 
 
 function Search({ dish }) {
