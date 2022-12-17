@@ -33,9 +33,9 @@ const Header = () => {
                             <Nav.Link href="/">Home</Nav.Link>
                             <Nav.Link href="/About">About</Nav.Link>
                             <NavDropdown title="Saved Recipes" id="navbarScrollingDropdown">
-                                <NavDropdown.Item href="Menu">Menu</NavDropdown.Item>
+                                <NavDropdown.Item href="/Menu">Menu</NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item href="shoppingList">
+                                <NavDropdown.Item href="/shoppingList">
                                     Shopping List
                                 </NavDropdown.Item>
                             </NavDropdown>
