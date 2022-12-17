@@ -37,7 +37,7 @@ npm start
 
 ## A live link to the web application
  ```
- vercel
+ https://recipeapp-pi.vercel.app/
   ```
 ## A link to an local version of the site
  ```
