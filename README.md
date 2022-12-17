@@ -36,13 +36,13 @@ npm start
 ```
 
 ## A live link to the web application
- ```
- https://recipeapp-pi.vercel.app/
-  ```
+ 
+### [https://recipeapp-pi.vercel.app/](https://recipeapp-pi.vercel.app/)
+
 ## A link to an local version of the site
- ```
- http://localhost:3000
-  ```
+
+ ### [http://localhost:3000](http://localhost:3000)
+  
 
 ## Features that have been Implemented
 - Home Page
@@ -50,7 +50,7 @@ npm start
 - No Page
 - View Recipes
 - Search recipes
-- Filter recipes by diet requirement
+- ~~-Filter recipes by diet requirement~~
 - Rate recipes
 - View Nutritional information
 
