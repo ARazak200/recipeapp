@@ -6,5 +6,6 @@ export default function Star(props) {
     return <FaStar
         color={props.selected ? "red" : "grey"}
         onClick={props.onSelect}
+        name="hover-feedback"
     />;
 }

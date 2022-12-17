@@ -9,13 +9,7 @@ const Nutrition = ({ item }) => {
       <Typography variant="h5" component="div" sx={{ textDecoration: 'underline' }}>Nutritional Information</Typography>
 
       <Table responsive striped hover size="sm">
-        <thead>
-          <tr>
-            <th></th>
-            <th>#</th>
-          </tr>
 
-        </thead>
         <tbody>
           <tr>
             <td>Serving size</td>
@@ -64,21 +58,6 @@ const Nutrition = ({ item }) => {
 
         </tbody>
       </Table>
-
-      {/* <ul style={{ listStyle: "none" }}>
-        <p>Serving size:{item.serving_size_g} g</p>
-        <li>Calories:{item.calories}</li>
-        <li>Sugar content: {item.sugar_g} g</li>
-        <li>Total fat content:{item.fat_total_g} g</li>
-        <li>Saturated fat content:{item.fat_saturated_g}g</li>
-        <li>Protein content: {item.protein_g}g</li>
-        <li>Total carbohydrates:{item.carbohydrates_total_g}g</li>
-        <li>Fiber: {item.fiber_g}g</li>
-        <li>Sodium:{item.sodium_mg}mg</li>
-        <li>Potassium :{item.potassium_mg}mg</li>
-        <li>Cholesterol:{item.cholesterol_mg}mg</li>
-      </ul> */}
-
     </>
 
   );

@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //import RecipeList from './components/RecipeList';
 import Item from './components/Item';
 import { dishes } from './data/data';
+import ShoppingList from './components/ShoppingList';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="" element={<StyledLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
+          {/* <Route path='/ShoppingList' element={<ShoppingList />} /> */}
 
           <Route path="/Product" element={<Search dish={dishes} />}>
             < Route path=":itemId" element={<Item Dishes={dishes} />} />

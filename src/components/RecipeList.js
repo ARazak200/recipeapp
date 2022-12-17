@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
 //import Button from 'react-bootstrap/Button';
@@ -12,33 +12,32 @@ import {
     AccordionSummary,
     AccordionDetails,
     Button,
-    Radio,
-    RadioGroup,
-    FormControlLabel,
-    FormControl,
-    FormLabel,
+    Radio, RadioGroup,
+    FormControlLabel, FormGroup, FormLabel,
+    Checkbox,
     Typography
 } from '@mui/material';
 
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-//import MUIAccordion from '@mui/material/Accordion';
-//import AccordionSummary from '@mui/material/AccordionSummary';
-//import AccordionDetails from '@mui/material/AccordionDetails';
 
-// import Btn from '@mui/material/Button';
-//import FoodDish from "./FoodDish";
-//import Item from "./Item";
-//import { useParams } from "react-router-dom";
+const RecipeList = ({ dishes, props }) => {
 
-const RecipeList = ({ dishes }) => {
-    const [searchField, setSearchField] = useState("");
-
-    const handleClick = (e) => {
-        setSearchField(e.target.innerHTML);
-        console.log(searchField);
+    const handleGlutenChange = (e) => {
+        //props.onGlutenChange(e.target.checked);
+        console.log("checked box GlutenFree")
     };
+    const handleVegChange = () => {
+        console.log("checked box Veg")
+    };
+    const handleVeganChange = () => {
+        console.log("checked box vegan")
+    };
+    const handleDairyChange = () => {
+        console.log("checked box dairy")
+    };
+
 
     return (
         <>
@@ -56,19 +55,30 @@ const RecipeList = ({ dishes }) => {
                     <AccordionDetails>
                         {/* Checkbox of allergy */}
 
-                        <FormControl>
-                            <FormLabel id="demo-row-radio-buttons-group-label">Dietary requirements</FormLabel>
+                        <FormGroup>
+                            <FormLabel id="demo-row-radio-buttons-group-label">Dietary Requirements</FormLabel>
                             <RadioGroup
                                 row
                                 aria-labelledby="demo-row-radio-buttons-group-label"
-                                name="row-radio-buttons-group"
-                            >
-                                <FormControlLabel value="GlutenFree" control={<Radio />} label="Gluten Free" />
-                                <FormControlLabel value="vegetarian" control={<Radio />} label="Vegetarian" />
-                                <FormControlLabel value="vegan" control={<Radio />} label="Vegan" />
-                                <FormControlLabel value="DairyFree" control={<Radio />} label="Dairy Free" />
+                                name="row-radio-buttons-group">
+
+                                <FormControlLabel value="GlutenFree" control={
+                                    <Checkbox onChange={handleGlutenChange} />} label="Gluten Free" />
+
+                                <FormControlLabel value="vegetarian" control={
+                                    <Checkbox onChange={handleVegChange} />}
+                                    label="Vegetarian" />
+
+                                <FormControlLabel value="vegan" control={
+                                    <Checkbox onChange={handleVeganChange} />}
+                                    label="Vegan" />
+
+                                <FormControlLabel value="DairyFree" control={
+                                    <Checkbox onChange={handleDairyChange} />}
+                                    label="Dairy Free" />
+
                             </RadioGroup>
-                        </FormControl>
+                        </FormGroup>
 
 
                     </AccordionDetails>

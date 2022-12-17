@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Form from 'react-bootstrap/Form';
 import RecipeList from "./RecipeList";
 
-//import DisplayNutrition from "./DisplayNutrition";
 
 
 function Search({ dish }) {
@@ -13,6 +12,9 @@ function Search({ dish }) {
         return entry.name.toLowerCase().includes(searchField.toLowerCase()) ||
             entry.ingredientList.toLowerCase().includes(searchField.toLowerCase());
     });
+
+
+
 
     return (
 
@@ -24,14 +26,11 @@ function Search({ dish }) {
                     placeholder="Search..."
                     className="me-2"
                     aria-label="Search"
-                    // change width to half width
                     onChange={(e) => setSearchField(e.target.value)}
                 />
             </Form>
 
             <RecipeList dishes={filtered} />
-
-            {/* <DisplayNutrition recipes={searchField} /> */}
 
         </Container>
 
