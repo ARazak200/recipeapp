@@ -10,6 +10,7 @@ import {
 
 import StarRating from "./starRating";
 
+
 //import DisplayNutrition from "../../../temp/DisplayNutrition";
 import FetchData from "./FetchNutrition";
 
@@ -39,7 +40,7 @@ const Item = ({ Dishes }) => {
           <Grid textAlign="center">
 
 
-            <Typography variant="h3" component="h2" sx={{ textDecoration: 'underline' }} >
+            <Typography variant="h3" component="h3" sx={{ textDecoration: 'underline' }} >
               {name}
             </Typography>
             <Typography variant="h5" component="p" >

@@ -195,4 +195,3 @@ export const dishes = [
     }
 ];
 
-export const createArray = length => [...Array(length)];

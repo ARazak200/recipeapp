@@ -12,7 +12,7 @@ import {
     AccordionSummary,
     AccordionDetails,
     Button,
-    Radio, RadioGroup,
+    RadioGroup,
     FormControlLabel, FormGroup, FormLabel,
     Checkbox,
     Typography
@@ -83,6 +83,7 @@ const RecipeList = ({ dishes, props }) => {
 
                     </AccordionDetails>
                 </Accordion>
+                <br></br>
 
                 <div >
                     {dishes.map((dish) => (
