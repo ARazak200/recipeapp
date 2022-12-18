@@ -139,7 +139,7 @@ export const dishes = [
         category: "Desert",
         //rating: ["3", "2", "5", "2"],
         //available: "yes",
-        img: "../images/kheer.png",
+        img: "../images/Kheer.png",
         ingredient: [
             { name: "Saffron strands", amount: "½ tsp " },
             { name: "Whole milk", amount: "2 litres" },
