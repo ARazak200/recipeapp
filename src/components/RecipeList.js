@@ -1,11 +1,6 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-
-//import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-// import Form from 'react-bootstrap/Form';
-
-//import Accordion from "react-bootstrap/Accordion";
 
 import {
     Accordion,
@@ -38,15 +33,11 @@ const RecipeList = ({ dishes, props }) => {
         console.log("checked box dairy")
     };
 
-
     return (
         <>
-            {/* TODO Style sub menu   */}
 
             <Container>
-
                 <Accordion sx={{ maxWidth: 700 }}>
-
                     <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                         <Typography variant="h5" component="p">
                             Filtered Search
@@ -54,7 +45,6 @@ const RecipeList = ({ dishes, props }) => {
                     </AccordionSummary>
                     <AccordionDetails>
                         {/* Checkbox of allergy */}
-
                         <FormGroup>
                             <FormLabel id="demo-row-radio-buttons-group-label">Dietary Requirements</FormLabel>
                             <RadioGroup
@@ -76,15 +66,11 @@ const RecipeList = ({ dishes, props }) => {
                                 <FormControlLabel value="DairyFree" control={
                                     <Checkbox onChange={handleDairyChange} />}
                                     label="Dairy Free" />
-
                             </RadioGroup>
                         </FormGroup>
-
-
                     </AccordionDetails>
                 </Accordion>
                 <br></br>
-
                 <div >
                     {dishes.map((dish) => (
                         <p key={dish.id}>
@@ -99,6 +85,7 @@ const RecipeList = ({ dishes, props }) => {
             </Container>
 
             <Outlet />
+
         </>
     );
 };

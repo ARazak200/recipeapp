@@ -4,7 +4,6 @@ import {
     Card, CardContent, CardMedia, CardActions,
     Button,
 } from '@mui/material/';
-
 import img from '../assets/fork_w.png'
 
 const Home = () => {
@@ -15,7 +14,6 @@ const Home = () => {
                 <Typography variant="h3" component="h2" textAlign="center" >
                     Welcome
                 </Typography>
-
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                     <Grid item xs={4}>
                         <Card sx={{ maxWidth: 345 }}>
@@ -34,7 +32,6 @@ const Home = () => {
                                 <Button href='Product'>CLICK HERE</Button>
                             </CardActions>
                         </Card >
-
                     </Grid>
                     <Grid item xs={4}>
                         < Card sx={{ maxWidth: 345 }}>
@@ -78,5 +75,3 @@ const Home = () => {
     );
 };
 export default Home;
-
-

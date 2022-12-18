@@ -1,22 +1,16 @@
-import * as React from 'react';
+import React from 'react';
 
 import {
-    styled,
-    Grid,
-    Paper,
-    Card,
-    CardContent,
-    CardMedia,
-    CardActions,
-    Container,
-    Button,
-    Typography
+    Grid, Container, Button,
+    Typography,
+    Card, CardContent, CardMedia, CardActions,
 } from '@mui/material/';
 
 import img from '../assets/Glasgow_Skyline.png';
 
 export default function About() {
     return (
+
         <Container >
 
             < Typography variant="h3" component="h2" textAlign="center" >
@@ -25,7 +19,6 @@ export default function About() {
 
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                 <Grid item xs={4}>
-
 
                     < Card sx={{ maxWidth: 345 }}>
                         <CardMedia
@@ -46,12 +39,8 @@ export default function About() {
                             <Button href='https://github.com/arazak200' target='_blank'>See My Other Projects</Button>
                         </CardActions>
                     </Card >
-
-
                 </Grid>
                 <Grid item xs={4}>
-
-
                     < Card sx={{ maxWidth: 345 }}>
                         <CardMedia
                             component="img"
@@ -64,15 +53,9 @@ export default function About() {
                                 From Glasgow, Scotland
                             </Typography>
                         </CardContent>
-
                     </Card >
-
-
-
                 </Grid>
                 <Grid item xs={4}>
-
-
                     < Card sx={{ maxWidth: 345 }}>
                         <CardMedia
                             component="img"
@@ -90,15 +73,9 @@ export default function About() {
                                 This is my inspiration to my recipe book. My grandma, she help me gift me with these diverse pakistani recipes.
                             </Typography>
                         </CardContent>
-
                     </Card >
-
-
                 </Grid>
-
                 <Grid item xs={4}>
-
-
                     < Card sx={{ maxWidth: 345 }}>
                         <CardMedia
                             component="img"
@@ -117,13 +94,9 @@ export default function About() {
                         <CardActions>
                             <Button href='https://www.gcu.ac.uk/' target='_blank'>See More</Button>
                         </CardActions>
-
                     </Card >
-
                 </Grid>
                 <Grid item xs={4}>
-
-
                     < Card sx={{ maxWidth: 345 }}>
                         <CardMedia
                             component="img"
@@ -143,12 +116,8 @@ export default function About() {
                             <Button href='https://www.gcu.ac.uk/study/courses/undergraduate-computing-glasgow' target='_blank'>See More</Button>
                         </CardActions>
                     </Card >
-
-
                 </Grid>
                 <Grid item xs={4}>
-
-
                     < Card sx={{ maxWidth: 345 }}>
                         <CardMedia
                             component="img"
@@ -167,9 +136,10 @@ export default function About() {
                             </Typography>
                         </CardContent>
                     </Card >
-
                 </Grid>
             </Grid>
+
         </Container >
+
     );
 }

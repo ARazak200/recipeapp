@@ -1,13 +1,12 @@
-import * as React from 'react';
-
+import React from 'react';
 import {
     Box,
     Typography,
     Container,
     Link
 } from '@mui/material/';
+import img from '../assets/fork_w.png';
 
-import img from '../assets/fork_w.png'
 function Copyright() {
     return (
         <Typography variant="body2" color="text.secondary">
@@ -33,7 +32,6 @@ export default function StickyFooter() {
                         ? theme.palette.grey[200]
                         : theme.palette.grey[800],
                 textAlign: 'center',
-
             }}
         >
             <Container maxWidth="sm">

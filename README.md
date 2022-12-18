@@ -5,7 +5,7 @@ Created using
 <a href="https://www.javascript.com" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"></a> 
 <a href="https://mui.com/" target="_blank"><img src="https://mui.com/static/logo.png" alt="MUI" width="40" height="40"></a> 
 <a href="https://getbootstrap.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="Bootstrap" width="40" height="40"></a> 
-<a href="https://www.w3schools.com/html/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain-wordmark.svg" alt="HTML" width="40" height="40"></a> 
+
 
 ## Included in repo
 - Video Demo
@@ -34,25 +34,34 @@ cd recipeapp
 ```bash
 npm start
 ```
-
-## A live link to the web application
- 
-### [https://recipeapp-pi.vercel.app/](https://recipeapp-pi.vercel.app/)
-
 ## A link to an local version of the site
 
- ### [http://localhost:3000](http://localhost:3000)
+ ```bash
+http://localhost:3000
+ ```
   
+## A live link to the web application
+ 
+### https://recipeapp-pi.vercel.app/
+[![ Vercel](https://vercel.com/button)](https://recipeapp-pi.vercel.app/)
 
 ## Features that have been Implemented
 - Home Page
 - About Page
 - No Page
 - View Recipes
-- Search recipes
-- ~~-Filter recipes by diet requirement~~
-- Rate recipes
-- View Nutritional information
+- Search recipes by name and ingredients 
+- View Nutritional information from API
+- Rate recipes 
+  - only Frontend, Functionality does not run
+
+## Features that have NOT been Implemented
+- Add to Shopping List
+  - only Frontend, Functionality does not run
+- Add To Menu
+  -  only Frontend, Functionality does not run
+- Filter recipes by diet requirement
+  -  only Frontend, Functionality part run
 
 ## Sources 
 ### Listed below are the open-sources elements used for the web application
@@ -89,8 +98,8 @@ Used for miscellaneous images
 All the recipes are sourced from [BBC Foods](https://www.bbcgoodfood.com/)
 
 1. [Aloo Tiki](https://www.bbcgoodfood.com/recipes/aloo-tikki)
-2. [Pakpra](https://www.bbcgoodfood.com/recipes/pakora)
-3. [Chicken biryani pilau](https://www.bbcgoodfood.com/recipes/chicken-biryani-pilau)
-4. [Chicken shish kebabs](https://www.bbcgoodfood.com/recipes/traffic-light-chicken-shish-kebabs)
+2. [Pakora](https://www.bbcgoodfood.com/recipes/pakora)
+3. [Chicken Biryani Pilau](https://www.bbcgoodfood.com/recipes/chicken-biryani-pilau)
+4. [Chicken hish Kebabs](https://www.bbcgoodfood.com/recipes/traffic-light-chicken-shish-kebabs)
 5. [Kheer](https://www.bbcgoodfood.com/recipes/indian-rice-pudding-kheer)
 6. [Sweet Rice](https://www.bbcgoodfood.com/recipes/yellow-rice)

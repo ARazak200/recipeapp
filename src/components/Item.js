@@ -3,15 +3,13 @@ import { useParams } from "react-router-dom";
 
 import {
   Container, Typography, Grid,
-  Card, CardContent, CardMedia, CardActions,
+  Card, CardContent, CardMedia,
   Button,
   CardActionArea,
 } from '@mui/material/';
 
 import StarRating from "./starRating";
 
-
-//import DisplayNutrition from "../../../temp/DisplayNutrition";
 import FetchData from "./FetchNutrition";
 
 const Item = ({ Dishes }) => {
@@ -21,25 +19,22 @@ const Item = ({ Dishes }) => {
     return entry.id === itemId;
   });
 
-
   //console.log(itemId);
   const { name, apiName, description, category, method, ingredient, allergy, img } = currentItem[0];
-  //allergy, ingredient,
 
   const [searchField] = useState([apiName]);
 
-
+  // <ShoppingList />
+  // const ShoppingListClick = props => {
+  //   <Button onClick={props.AddList}>hello</Button>
+  // }
 
   return (
     <>
 
-
       <Container>
-
         <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 2 }}>
           <Grid textAlign="center">
-
-
             <Typography variant="h3" component="h3" sx={{ textDecoration: 'underline' }} >
               {name}
             </Typography>
@@ -47,37 +42,30 @@ const Item = ({ Dishes }) => {
               {description}
             </Typography>
           </Grid>
-
           <Grid item xs={5} textAlign="center" sx={{ maxWidth: 450 }} >
-
-
             <Card sx={{ maxWidth: 500 }}>
+              <CardMedia
+                component="img"
+                height="250"
+                image={img}
+                alt={name}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {category}
+                </Typography>
+                <StarRating />
+              </CardContent>
               <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="250"
-                  image={img}
-                  alt={name}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {category}
-                  </Typography>
-                  <StarRating />
-                </CardContent>
+                {/* <ShoppingListClick doIt={AddList} />*/}
+                <Button size="small" color="primary" >Add To Shopping List</Button>
               </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary">Add To shopping list</Button>
-                <Button size="small" color="primary">Add Favorites</Button>
-              </CardActions>
+              <CardActionArea>
+                <Button size="small" color="primary">Add To Menu</Button>
+              </CardActionArea>
             </Card>
-
           </Grid>
-
-
-
           <Grid item xs={5} >
-
             <Card>
               {allergy.map((allergies) => (
                 <span key={allergies.name}>
@@ -86,16 +74,12 @@ const Item = ({ Dishes }) => {
                   </Typography>
                 </span>
               ))}
-
             </Card>
-
             <Card sx={{ maxWidth: 700 }} >
               <CardContent>
-
                 <Typography variant="h5" component="div" textAlign="center" sx={{ textDecoration: 'underline' }}>
                   Ingredients
                 </Typography>
-
                 <Typography variant="body1" component="div">
                   <ol>
                     {ingredient.map((ingredients) => (
@@ -108,11 +92,6 @@ const Item = ({ Dishes }) => {
               </CardContent>
             </Card>
           </Grid>
-
-          {/* <Grid item xs={2} >
-            {/* something
-        </Grid> */}
-
           <Grid item xs={9} >
             <Card sx={{ maxWidth: 1000 }}>
               {method.map((methods) => (
@@ -125,25 +104,14 @@ const Item = ({ Dishes }) => {
                   </Typography>
                 </ul>
               ))}
-
             </Card>
           </Grid>
-
           <Grid item xs={3} >
-
             <Typography variant="body2" component="div" textAlign="center" >
-
               <FetchData query={searchField} />
-              {/* <DisplayNutrition dishes={name} /> */}
             </Typography>
-
-
-
-
           </Grid>
-
         </Grid>
-
       </Container>
 
     </>

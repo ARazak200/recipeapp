@@ -1,5 +1,4 @@
 import React from "react";
-//import { Link } from "react-router-dom";
 
 import {
     Container,
@@ -13,6 +12,7 @@ import img from '../assets/fork.png';
 const Header = () => {
     return (
         <>
+
             <Navbar bg="dark" variant="dark" expand="lg">
                 <Container fluid>
                     <img
@@ -44,13 +44,8 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
         </>
     );
 };
 export default Header;
-
-
-
-
-
-

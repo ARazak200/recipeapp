@@ -9,6 +9,7 @@ export default function Menu() {
         <>
             <Container>
                 <Typography variant="h3" component="h2" textAlign="center" >Menu</Typography>
+                <p>Currently under construction</p>
             </Container>
 
         </>
